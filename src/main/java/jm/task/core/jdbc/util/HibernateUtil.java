@@ -38,7 +38,7 @@ public class HibernateUtil {
     public static Session getSession() {
         Session session = null;
         try {
-            session = sessionFactory.openSession();  // Используем openSession для явного управления сессией
+            session = sessionFactory.getCurrentSession();
             if (session != null) {
                 System.out.println("Connection to database is successful!");
             }
